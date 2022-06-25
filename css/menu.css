@@ -16,6 +16,7 @@
     width: 100vw;
     height: 100vh;
     opacity: 0;
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -25,6 +26,7 @@
 
 .menu-overlay.active {
     opacity: 0.6;
+    display: block;
 }
 
 .menu-box {

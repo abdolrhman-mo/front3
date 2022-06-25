@@ -55,13 +55,15 @@ tabsLinks.forEach((link) => {
 
 // Nav Menu
 
+const menuOverlay = document.querySelector(".menu-overlay");
+
 document.addEventListener("click", (e) => {
-  if (
-    e.target.classList.contains("menu-button") ||
-    e.target.classList.contains("menu-overlay")
-  ) {
+  if (e.target.classList.contains("menu-button")) {
     document.querySelector(".menu-box").classList.toggle("active");
-    document.querySelector(".menu-overlay").classList.toggle("active");
+    menuOverlay.classList.toggle("active");
+  } else if (e.target.classList.contains("menu-overlay")) {
+    document.querySelector(".menu-box").classList.remove("active");
+    document.querySelector(".menu-overlay").classList.remove("active");
   }
 });
 
