@@ -34,6 +34,7 @@
     width: 0;
     height: 100vh;
     margin: 0;
+    padding: 0;
     overflow: hidden;
     transition: .3s ease;
     position: fixed;
@@ -43,17 +44,34 @@
     direction: rtl;
 }
 
+@media (max-width: 767px) {
+    .menu-box {
+        width: 100vw;
+        height: 0;
+    }
+}
+
 .menu-box.active {
     width: 60vw;
+}
+
+@media (max-width: 767px) {
+    .menu-box.active {
+        height: 100vh;
+    }
 }
 
 .menu-box li {
     list-style: none;
     font-size: 30px;
-    padding: 20px 0;
+    padding: 20px 30px;
     cursor: pointer;
     transition: .3s;
     display: none;
+}
+
+.menu-box li:first-of-type { /* menu button inside the menu-box */
+    padding-top: 30px;
 }
 
 @media (max-width: 767px) {

@@ -4,6 +4,8 @@
     position: relative;
 }
 
+/* Start Nav Bar  */
+
 .landing-page nav {
     display: flex;
     justify-content: space-between;
@@ -28,21 +30,11 @@
     }
 }
 
-@media (max-width: 367px) {
-    .landing-page nav .logo {
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 467px) {
-    .landing-page nav .logo {
-        font-size: 13px;
-    }
-}
-
 .landing-page nav .contact-link {
     cursor: pointer;
 }
+
+/* End Nav Bar  */
 
 .landing-page .introduction-text {
     text-align: center;
@@ -101,4 +93,12 @@
 .landing-page .introduction-text p {
     color: #666;
     line-height: 1.7;
+}
+
+/* Things That will Disappear */
+@media (max-width: 767px) {
+    /* Nav Bar  */
+    .landing-page nav .contact-link {
+        display: none;
+    }
 }

@@ -8,12 +8,11 @@
         'Gill Sans MT',
         Calibri,
         'Trebuchet MS',
-        sans-serif;
-    --text-font: Verdana,
+        sans-serif; 
+    --text-font: "Cairo", Verdana,
         Geneva,
         Tahoma,
         sans-serif;
-    --text-font: "Cairo"
 }
 
 

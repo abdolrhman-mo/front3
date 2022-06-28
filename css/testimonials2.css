@@ -13,11 +13,9 @@
 }
 
 @media (max-width: 767px) {
-    .testimonials2 .t-box .t-right,
-    .testimonials2 .t-box .t-left {
+    .testimonials2 .t-box .t-right {
         float: none;
         width: 100%;
-        text-align: center;
     }
 }
 
@@ -61,3 +59,9 @@
     letter-spacing: 5px;
 }
 
+/* Things That Will Disappear */
+@media (max-width: 767px) {
+    .testimonials2 .t-box .t-left {
+        display: none;
+    }
+}

@@ -6,7 +6,7 @@
     --img1-top: calc(100% - var(--img1-height) + 20px);
     /* Second Image  */
     --img2-width: 270px;
-    --img2-height: 270px;
+    --img2-height: var(--img2-width);
     --img2-left: 40px;
     --img2-top: calc(100% - var(--img2-height) - 150px);
 }
@@ -77,19 +77,18 @@
     :root {
         --img1-width: 200px;
         --img2-width: 220px;
-        --img2-height: 220px;
+        --img2-height: var(--img2-width);
     }
 }
 
 @media (max-width: 992px) {
-    /* Image Size  */
+    /* Image Size and Position  */
     :root {
         /* First Image  */
         --img1-width: 150px;
         --img1-top: calc(100% - var(--img1-height) - 170px);
         /* Second Image  */
         --img2-width: 170px;
-        --img2-height: 170px;
         --img2-top: calc(100% - var(--img2-height) - 250px);
     }
     /* Shadow axis  */
@@ -100,15 +99,12 @@
 }
 
 @media (max-width: 767px) {
-    /* Image Size  */
+    /* Image Size and Position  */
     :root {
         /* First Image  */
         --img1-width: 100px;
-        --img1-top: calc(100% - var(--img1-height) - 170px);
-        /* Second Image  */
-        --img2-width: 120px;
-        --img2-height: 120px;
-        --img2-top: calc(100% - var(--img2-height) - 250px);
+        --img1-top: calc(100% - var(--img1-height) - 0px);
+        --img1-left: calc(100% - var(--img1-width));
     }
     /* Shadow axis  */
     .landing-page .side-img-container:first-of-type::before {
@@ -120,21 +116,17 @@
 @media (max-width: 567px) {
     :root {
         /* First Image  */
-        --img1-width: 50px;
-        --img1-left: calc(100% - var(--img1-width));
-        /* Second Image  */
-        --img2-width: 70px;
-        --img2-height: 70px;
-        --img2-left: 20px;
+        --img1-width: 80px;
     }
 }
 
-@media (max-width: 420px) {
-    :root {
-        /* First Image  */
-        --img1-left: calc(100% - var(--img1-width));
-        /* Second Image  */
-        --img2-left: 10px;
-        --img2-top: calc(100% - var(--img2-height) - 330px);
+/* Things That Will Disappear */
+@media (max-width: 767px) {
+    .landing-page .side-img-container:nth-of-type(2) img {
+        display: none;
+    }
+    
+    .landing-page .side-img-container:nth-of-type(2)::before {
+        display: none;
     }
 }
